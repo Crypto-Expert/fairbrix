@@ -67,7 +67,7 @@ static const CAmount DEFAULT_FALLBACK_FEE = 200'000;
 //! -discardfee default
 static const CAmount DEFAULT_DISCARD_FEE = 10'000;
 //! -mintxfee default
-static const CAmount DEFAULT_TRANSACTION_MINFEE = 10'000;
+static const CAmount DEFAULT_TRANSACTION_MINFEE = 1000000;
 /**
  * maximum fee increase allowed to do partial spend avoidance, even for nodes with this feature disabled by default
  *
@@ -108,7 +108,7 @@ struct FeeCalculation;
 enum class FeeEstimateMode;
 
 //! Default for -addresstype
-constexpr OutputType DEFAULT_ADDRESS_TYPE{OutputType::BECH32};
+constexpr OutputType DEFAULT_ADDRESS_TYPE{OutputType::LEGACY};
 
 static constexpr uint64_t KNOWN_WALLET_FLAGS =
         WALLET_FLAG_AVOID_REUSE
